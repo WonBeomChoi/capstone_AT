@@ -1,0 +1,94 @@
+body {
+  padding: 50px;
+  font: 50px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.contain_val{
+  display: flex;
+  margin: 10px;
+  flex-direction:row;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.menu{
+  display: flex;
+  
+  justify-content: center;
+}
+/* 햄버거 */
+#wrapper {
+  width:70%;
+  height:60px;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 1px 15px rgba(0,0,0,.8);
+  
+}
+
+#line-wrapper {
+  cursor:pointer;
+  width:56px;
+  height:35px;
+  position:relative;
+  top:10.5px;
+  left:47px;
+}
+
+.line {
+  background:rgb(100,100,168);
+  margin-top:6px;
+  margin-bottom:6px;
+  width:56px;
+  height:7px; 
+  border-radius:2px;
+  box-shadow:0 1px 3px rgba(99, 101, 168, 0.5);
+  position:relative;
+}
+/* 여까지 함바가 */
+
+
+.contain_post{
+  display: flex;
+  height: auto;
+  flex: 1 0 19%;
+  flex-direction: column;
+  flex-wrap: wrap
+}
+.title{
+  font-size: 10rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.contain_val div{
+  border-bottom: solid 0.1px;
+  margin: 1px;
+  padding: 1px;
+}
+.post_num_tag{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: antiquewhite;
+  height: 300px;
+  flex: 7;
+  background-color: black
+}
+.post_name_tag{
+  flex: 2;
+}
+.post_writer_tag{
+  flex: 1;
+}
+
+@media (max-width: 1500px){
+  .contain_post{
+    flex : 1 0 33%;
+  }
+}
+@media (max-width: 1000px){
+  .contain_post{
+    flex: 1 0 49%;
+  }
+}

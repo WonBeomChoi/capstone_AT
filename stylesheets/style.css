@@ -1,0 +1,7 @@
+.contain_main{
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    padding: 1000px;
+    font-size: 100px;
+}
