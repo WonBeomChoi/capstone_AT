@@ -13,9 +13,6 @@
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
-  <link href="css/modern-business.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -91,10 +88,10 @@
     <div class="row">
       <div class="col-lg-8 mb-4">
         <h3>상품설명</h3>
-        <form name="sentMessage" id="contactForm" novalidate>
+        <form method="post" name="sentMessage" id="contactForm" action="/write">
           <div class="control-group form-group">
             <div class="controls">
-              <label>상품이름:</label>
+              <label>상품이름:<%= title%></label>
               <input type="text" class="form-control" id="name" required data-validation-required-message="상품이름을 입력해주세요.">
               <p class="help-block"></p>
             </div>
@@ -102,10 +99,7 @@
           <div class="control-group form-group">
               <div class="controls">
                 <label>사진:</label>
-                  <form action="http://localhost:3000" method="post" enctype="multipart/form-data"> 
-                    <!-- DB로 전달  enctype  - 인코딩 타입 -->
                     <input type="file" name="profile">
-                  </form>
                 <p class="help-block"></p>
               </div>
             </div>
@@ -118,13 +112,13 @@
           <div class="control-group form-group">
             <div class="controls">
               <label>상태:</label>
-              <input type="text" class="form-control" id="email" required data-validation-required-message="상태를 입력해주세요.">
+              <input type="text" class="form-control" id="status" required data-validation-required-message="상태를 입력해주세요.">
             </div>
           </div>
           <div class="control-group form-group">
             <div class="controls">
               <label>설명:</label>
-              <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="설명을 입력해주세요" maxlength="999" style="resize:none"></textarea>
+              <textarea rows="10" cols="100" name="message" class="form-control" id="message" required data-validation-required-message="설명을 입력해주세요" maxlength="999" style="resize:none"></textarea>
             </div>
           </div>
           <div id="success"></div>
@@ -148,13 +142,8 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Contact form JavaScript -->
-  <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-  <script src="js/jqBootstrapValidation.js"></script>
-  <script src="js/contact_me.js"></script>
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

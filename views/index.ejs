@@ -93,14 +93,13 @@
           %>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="/product"><img class="card-img-top" src="/images/<%= rows[0].사진이름 %>" alt="" width="200" height="200"></a>
+              <a href="/product"><img class="card-img-top" src="/images/<%= rows[i].사진이름 %>" alt="" width="200" height="200"></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="/product/<%=rows[i].게시글번호%>"><%= rows[i].게시글제목 %></a>
                 </h4>
                 <h5><%= rows[i].가격 %></h5>
                 <p class="card-text"><%= rows[i].게시글내용 %></p>
-                <!-- <p class="card-text">3번 입은 청자켓 더 안 입을거 같아서 팝니다~</p> -->
               </div>
               <div class="card-footer">
                 <small class="text-muted">물건 상태 : &#9733; &#9733; &#9733; &#9733; &#9734;</small>
